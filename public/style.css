@@ -1,0 +1,35 @@
+body{
+    padding:0;
+    margin:0;
+}
+#img{
+    height: 100px;
+    width: 100px;
+}
+
+#videoGrid{
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+
+video{
+    height: 300px;
+    flex-basis:300px;
+    flex-grow: 1;
+    margin: 10px;
+    position: relative;
+}
+
+.mute{
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    background-color: red;
+    top: 10px;
+    left:10px;
+}

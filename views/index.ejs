@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <script src="video.js" defer></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Meeting</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 95vh;
+            min-width: 98vw;
+        }
+
+        .imgg{
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 100vh;
+            width: 100vw;
+            bottom: 0;
+            opacity: 0.5;
+        }
+
+        #btn-start {
+            background-color: #1F93CA;
+            padding: 10px 20px;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: #ffffff;
+            z-index: 1000;
+            border-radius: 10px;
+            transition: all 200ms ease;
+        }
+
+        #btn-start:hover {
+            transform: scale(1.08);
+        }
+    </style>
+</head>
+
+<body>
+    <div id="btn-start">
+        Start Meeting
+    </div>
+    <img class="imgg" src="images.jpg"/>
+</body>
+
+</html>

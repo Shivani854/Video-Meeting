@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script>
+    const ROOM_ID = "<%= roomId %>"
+  </script>
+  <script src="https://unpkg.com/peerjs@1.2.0/dist/peerjs.min.js" defer></script>
+  <script src="/socket.io/socket.io.js" defer></script>
+  <script src="script.js" defer></script>
+  <title>Welcome</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    #video-grid {
+      display: flex;
+      flex-wrap: wrap;
+      background-color: black;
+      min-height: 100vh;
+      justify-content: center;
+      align-items: center;
+      min-width: 100vw;
+    }
+
+    .link {
+      position: fixed;
+      bottom: 10px;
+      left: 10px;
+      right: 10px;
+      color: white;
+      display: flex;
+    }
+
+    .link > div{
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      user-select: none;
+      border-style: solid;
+      border-width: 1px;
+      cursor: pointer;
+      padding: 0px 10px;
+    }
+
+    .link > input{
+      font-size: 0.9rem;
+      font-weight: 500;
+      padding: 8px 10px;
+      border: none;
+      width: 400px;
+      user-select: none;
+      color: white;
+      background-color: black;
+    }
+
+    .self {
+      position: fixed;
+      bottom: 10px;
+      right: 10px;
+      width: calc(15vw + 100px);
+      height: calc(10vw + 100px);
+    }
+
+    .btn-cancel {
+      background-color: #E54E60;
+      color: #ffffff;
+      position: fixed;
+      margin: auto;
+      width: 60px;
+      height: 60px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 100%;
+      bottom: 10%;
+      left: 48%;
+      z-index: 1000;
+      cursor: pointer;
+      transition: all 50ms ease;
+    }
+
+    .btn-cancel>img {
+      width: 30px;
+      height: 30px;
+      cursor: pointer;
+      transition: all 50ms ease;
+    }
+
+    .btn-cancel>img:hover {
+      transform: scale(1.2);
+    }
+
+    .btn-cancel:hover {
+      transform: scale(1.2);
+    }
+
+    video {
+      display: flex;
+      flex: 1;
+      max-width: 500px;
+      max-height: 500px;
+      object-fit: cover;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="link">
+    <input type="text" value="" id="myInput" disabled>
+    <div>Copy</div>
+  </div>
+  <div class="btn-cancel">
+    <img src="end.svg" />
+  </div>
+  <div id="video-grid">
+    
+  </div>
+</body>
+
+</html>
